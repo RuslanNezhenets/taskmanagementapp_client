@@ -1,0 +1,65 @@
+/*
+//.modal-backdrop {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background-color: rgba(0, 0, 0, 0.5);
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  z-index: 1000;
+//}
+
+.modal_title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal_description {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.modal_control {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    border: none;
+    background-color: #fff;
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    margin-left: 10px;
+
+    font-size: 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .modal_control-delete {
+    background-color: #d90404;
+    color: $white;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #b00202;
+    }
+  }
+
+  .modal_control-cancel {
+    &:hover {
+      background-color: $white-hover;
+    }
+  }
+}*/

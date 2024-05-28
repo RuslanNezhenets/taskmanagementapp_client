@@ -1,0 +1,151 @@
+.profile {
+
+}
+
+.profile_banner {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  height: 200px;
+  width: 100%;
+}
+
+.profile_content {
+  margin: 0 20%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.profile_info {
+  margin-top: 64px;
+
+  border-radius: 5px;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  margin-top: -64px;
+}
+
+.profile-avatar-wrapper:hover .profile-avatar-img {
+  filter: brightness(50%);
+}
+
+.profile-avatar-wrapper:hover .profile-avatar-icon {
+  display: flex;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+  font-size: 24px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.profile_username {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.profile_control_button {
+  background-color: $white-dark;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $white-hover;
+    transition: background-color .075s linear;
+  }
+}
+
+.profile_info_block {
+  border: 1px black solid;
+  border-radius: 3px;
+
+  padding: 20px;
+}
+
+.profile_info_block_title {
+  margin-bottom: 20px;
+}
+
+.profile_info_inputs {
+  margin-bottom: 30px;
+}
+
+.profile_info_input {
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border-radius: 3px;
+
+  height: 40px;
+
+  font-size: 16px;
+
+  &-big {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $white-hover;
+    cursor: text;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.profile_activity {
+  width: 65%;
+}
+
+.profile_task {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_task_title {
+  margin-bottom: 5px;
+}
+
+.profile_task_column {
+  white-space: nowrap;
+  align-self: flex-start;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: #0d6efd;
+  font-size: 14px;
+  color: white;
+}
+
+.profile_project_name {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

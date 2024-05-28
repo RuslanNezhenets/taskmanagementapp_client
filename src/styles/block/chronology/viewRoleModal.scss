@@ -1,0 +1,48 @@
+.tasksList {
+  border: 1px $white-dark solid;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.tasksList_task {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 5fr 1fr 1.5fr;
+  gap: 10px;
+
+  border: 1px transparent solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  &:hover {
+    border: 1px $white-dark solid;
+  }
+}
+
+.tasks_done {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  align-items: center;
+}
+
+
+.tasks_done_line {
+  background-color: $white-dark;
+  border-radius: 5px;
+  height: 12px;
+  width: 85%;
+}
+
+.tasks_done_block {
+  background-color: green;
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  width: 0;
+
+  &.complete {
+    border-radius: 5px;
+  }
+}

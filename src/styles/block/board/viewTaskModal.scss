@@ -1,0 +1,300 @@
+.viewModal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewTask_left {
+  margin-right: 30px;
+  width: 65%;
+}
+
+.viewModal_body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.viewTask_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  &-display {
+    &:hover {
+      background-color: $white-hover;
+      transition: background-color 0.2s linear;
+    }
+  }
+
+  &-input {
+    border: #4444f1 2px solid;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 2px solid #4a90e2;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+  }
+}
+
+// ===== Metadata =====
+
+.viewTask_metadata {
+  margin-bottom: 15px;
+
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
+  }
+}
+
+.priority {
+  background-color: transparent;
+  color: black!important;
+  border: 1px solid black;
+
+  &-high {
+    background-color: #ff4136;
+    color: white!important;
+  }
+
+  &-medium {
+    background-color: yellow;
+    color: black!important;
+  }
+
+  &-low {
+    background-color: green;
+    color: white!important;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-card {
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: none;
+    height: 75%;
+    margin: auto 0;
+  }
+}
+
+.status {
+  background-color: #0074d9;
+  border: 1px solid black;
+}
+
+.task_dates div {
+  margin: 10px 0;
+}
+
+// ===== Description =====
+
+.viewTask_description {
+  margin-bottom: 30px;
+}
+
+.viewTask_description_text {
+  margin-bottom: 10px;
+}
+
+.ql-editor {
+  min-height: 100px;
+}
+
+.viewTask_description_display {
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $white-hover;
+    transition: background-color 0.2s linear;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.viewTask_description_placeholder {
+  color: #666
+}
+
+.viewTask_description_control {
+  display: flex;
+  margin-top: 15px;
+
+  button {
+    border: none;
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    margin-left: 10px;
+
+    font-size: 14px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .viewTask_description_control_confirm {
+    background-color: #2525ef;
+    color: $white;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #4444f1;
+    }
+  }
+
+  .viewTask_description_control_cancel {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $white-hover;
+    }
+  }
+}
+
+.viewTask_right {
+  width: 30%;
+  margin-right: 2%;
+}
+
+.info_card {
+  border: 1px $white-dark solid;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.viewTask_date {
+}
+
+.viewTask_right_title {
+  font-weight: 500;
+}
+
+.executor {
+  position: relative;
+
+  .user {
+    &:hover {
+      background-color: $white-hover;
+      border-radius: 3px;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 10px;
+
+  width: 100%;
+  padding: 5px 15px;
+}
+
+.user_avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user_name {
+  color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.selectUser-button {
+  padding: 5px 20px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+}
+
+.role {
+  position: relative;
+}
+
+.viewTask_role {
+  display: flex;
+  background-color: #DFD8FD;
+
+  margin: 5px 0;
+
+  height: 40px;
+
+  padding: 5px 15px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(206, 200, 255);
+  }
+}
+
+.viewTask_role_text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.days_input {
+  margin-bottom: 5px;
+}
+
+.days_input_title {
+  margin-bottom: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.days_input_body {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+
+  input {
+    grid-column: span 4;
+  }
+
+  .days_input_button {
+    border: 1px solid $white-dark;
+    border-radius: 5px;
+    padding: 2px 5px;
+    user-select: none;
+
+    height: 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

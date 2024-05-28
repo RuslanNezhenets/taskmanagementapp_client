@@ -1,0 +1,42 @@
+.form_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px; // Или другое значение, чтобы отодвинуть от текстового поля
+
+  margin-left: -10px;
+
+  width: 100%;
+
+  position: absolute;
+
+  .confirm_button,
+  .cancel_button {
+    width: 30px; // Размер кнопок
+    height: 30px;
+
+    color: #4a90e2;
+    font-size: 18px;
+
+    background-color: $white;
+    border: 1px solid $white-hover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px 0 0 10px;
+
+    &:hover {
+      background-color: #e6f0fd; // Цвет фона при наведении
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #ccdfff; // Цвет фона при нажатии
+    }
+  }
+}

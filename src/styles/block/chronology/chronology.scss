@@ -1,0 +1,148 @@
+.chronology_page {
+  margin: 30px 50px;
+}
+
+.chronology_table {
+  display: flex;
+  flex-direction: row;
+}
+
+.fixed-column {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.scrollable-content {
+  overflow-x: auto;
+  flex-grow: 1;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    &:hover {
+      background: #f1f1f1;
+      border-radius: 8px;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(85, 85, 85, 0.5);
+    border-radius: 8px;
+
+    opacity: 10%;
+
+    &:hover {
+      background: rgba(85, 85, 85, 0.7);
+    }
+  }
+}
+
+.timeline {
+  width: 100%;
+
+  position: relative;
+  height: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  &-empty {
+    border: black 1px dashed;
+    justify-content: center;
+
+    transition: font-weight .05s linear;
+
+    &:hover {
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+}
+
+.timeline-block {
+  position: absolute;
+  height: 60%;
+  border-radius: 5px;
+  cursor: ew-resize;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.timeline-block_date {
+  position: absolute;
+  font-size: 13px;
+}
+
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(12, 200px);
+  grid-template-rows: auto;
+}
+
+.timeline-header {
+  display: contents;
+}
+
+.timeline-header-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.timeline-row {
+  display: contents;
+}
+
+.timeline-title {
+  grid-column: 1;
+  padding: 10px;
+
+  height: 50px;
+
+  &.first_color {
+    background-color: $white-bg;
+  }
+
+  &.second_color {
+    background-color: $white-hover;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.timeline-row-block {
+  display: grid;
+  grid-column: 1 / -1;
+
+  height: 50px;
+
+  &.first_color {
+    background-color: $white-bg;
+  }
+
+  &.second_color {
+    background-color: $white-hover;
+  }
+}
+
+div.role_creator_button {
+  padding: 5px;
+
+  &:hover {
+    background-color: $white-dark;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

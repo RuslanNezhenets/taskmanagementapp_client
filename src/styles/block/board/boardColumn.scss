@@ -1,0 +1,119 @@
+.board_column {
+  background-color: $white-bg;
+  //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  border-radius: 10px;
+  padding: 10px;
+
+  width: 350px;
+
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.board_column_header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  position: relative;
+
+  &:hover {
+    .dots-button {
+      opacity: 1;
+    }
+  }
+}
+
+.board_column_title {
+  font-size: 20px;
+  font-weight: bold;
+
+  padding-left: 5px;
+
+  text-transform: uppercase;
+
+  width: 85%;
+
+  &:hover {
+    background-color: $white-hover;
+    transition: background-color .1s linear;
+    border-radius: 3px;
+  }
+
+  &.editable-input {
+    border: #4444f1 2px solid;
+    border-radius: 3px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 2px solid #4a90e2;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+  }
+}
+
+.board_column_content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.board_column_card_create {
+  padding: 7.5px 10px;
+  border-radius: 5px;
+
+  margin-top: 2.5px;
+
+  font-weight: bold;
+
+  transition: background-color .1s linear;
+
+  &:hover {
+    background-color: $white-hover;
+    cursor: pointer;
+  }
+}
+
+.board_column_card_creator {
+  background-color: $white;
+
+  position: relative;
+
+  padding: 10px;
+  border: 1.5px solid #4a90e2;
+  border-radius: 5px;
+
+  textarea {
+    width: 100%;
+    min-height: 20px;
+    resize: none;
+    overflow: hidden;
+    padding: 8px;
+    border: 1px solid $white-hover;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 20px;
+
+    &:focus {
+      //border-color: #4a90e2;
+      //box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(74, 144, 226, 0.5);
+      outline: none;
+    }
+  }
+
+  &.column_creator {
+    height: 60px;
+    width: 300px;
+
+    textarea {
+      height: 100%;
+    }
+  }
+}

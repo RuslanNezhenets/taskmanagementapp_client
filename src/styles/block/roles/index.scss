@@ -1,0 +1,43 @@
+.roles_page {
+
+}
+
+.role_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  justify-content: center;
+}
+
+.role_card {
+  width: 15%;
+  height: 234px;
+  transition: transform 0.3s ease;
+
+  margin: 1%;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+.role_card_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.role_card_color {
+  width: 100%;
+
+  border: none;
+  padding: 0;
+  background: transparent;
+  -webkit-appearance: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

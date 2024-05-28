@@ -1,0 +1,28 @@
+.admin_page {
+
+}
+
+.admin_users {
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.admin_user_card {
+  display: flex;
+  border: 1px solid $white-dark;
+  border-radius: 5px;
+
+  padding: 10px 20px;
+
+  width: 49.3%;
+}
+
+.admin_user_card_body {
+  display: flex;
+  margin: auto 0;
+}

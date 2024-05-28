@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.non-clickable {
+  pointer-events: none;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+
+  .sidebar-container {
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    z-index: 200;
+  }
+
+  .content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    height: 100vh;
+
+    .navbar-container {
+      width: calc(100% - 250px);
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .app-router-container {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: auto;
+
+      &.frame {
+        padding: 30px 50px;
+      }
+    }
+
+    .navbar-container + .app-router-container {
+      margin-top: 76px;
+    }
+
+    &-full {
+      margin-left: 0;
+
+      .navbar-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.scrollable-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@import "vars";
+@import "block/board/board";
+@import "block/board/boardColumn";
+@import "block/board/taskMiniCard";
+@import "block/formControl";
+@import "block/dropdownMenu";
+@import "block/board/confirmModal";
+@import "block/board/viewTaskModal";
+@import "block/navbar";
+@import "block/sidebar";
+@import "block/profile/profile";
+@import "block/editableText";
+@import "block/auth";
+@import "block/chronology/chronology";
+@import "block/chronology/viewRoleModal";
+@import "block/admin/admin";
+@import "block/roles/index";
+@import "block/algorithm/index";
+@import "block/projects/index";

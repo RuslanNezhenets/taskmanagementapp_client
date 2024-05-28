@@ -1,0 +1,47 @@
+.gantt_block {
+
+}
+
+.algorithm_control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gantt_block_button {
+  margin-bottom: 20px;
+}
+
+.close-tab-icon {
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #000;
+}
+
+.close-tab-icon:hover {
+  color: #f00;
+}
+
+.details-container {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+
+  padding: 5px 10px;
+}
+
+.details-container-button {
+  border-radius: 5px;
+  color: white;
+  background-color: #0d6efd;
+  padding: 5px 10px;
+  text-align: center;
+  margin-top: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #0152da;
+  }
+}

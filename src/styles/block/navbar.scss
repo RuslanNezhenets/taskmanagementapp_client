@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: gray;
+  padding: 10px 20px;
+}
+
+.navbar_brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_logoLink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.navbar_logo {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar_searchAndUser {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_searchInput {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.navbar_profileLink {
+  text-decoration: none;
+}
+
+.navbar_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.custom-avatar-dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.custom-avatar-dropdown .dropdown-menu {
+  right: 0;
+  left: auto;
+}
