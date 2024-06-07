@@ -88,14 +88,14 @@ const StartModal = ({show, onHide, start}) => {
 
             <Modal show={showWarningModal} onHide={handleWarningModalClose} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Відсутні необхідні дані</Modal.Title>
+                    <Modal.Title>{warning?.body && warning.body.type ? 'Некорекнті дані' : 'Відсутні необхідні дані'}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {warning && (
                         <div>
                             {warning.message && <p><b>{warning.message}</b></p>}
 
-                            {warning.body && (
+                            {warning.body && warning.body.type !== 'other' && (
                                 <div>
                                     {warning.body.type === 'task' ? (
                                         <ul>
@@ -115,7 +115,11 @@ const StartModal = ({show, onHide, start}) => {
                                 </div>
                             )}
 
-                            <div>Будь ласка, переконайтеся, що всі дані вказані, перш ніж запускати алгоритм</div>
+                            <div>
+                                {warning?.body && warning.body.type ?
+                                'Будь ласка, переконайтеся, що всі дані вказані вірно, перш ніж запускати алгоритм' :
+                                'Будь ласка, переконайтеся, що всі дані вказані, перш ніж запускати алгоритм'}
+                            </div>
                         </div>
                     )}
                 </Modal.Body>
